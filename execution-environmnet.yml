@@ -1,0 +1,14 @@
+version: 3
+
+images:
+  base_image:
+    name: quay.io/ansible/awx-ee:latest
+
+dependencies:
+  python:
+    - proxmoxer
+    - requests
+
+  galaxy:
+    collections:
+      - community.proxmox
