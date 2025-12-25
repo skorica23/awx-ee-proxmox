@@ -2,7 +2,7 @@ version: 3
 
 images:
   base_image:
-    name: quay.io/ansible/ansible-runner:stable-2.15-latest
+    name: quay.io/ansible/ansible-runner:stable-2.12-latest
 
 dependencies:
   ansible_core:
