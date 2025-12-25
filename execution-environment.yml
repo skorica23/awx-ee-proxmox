@@ -11,8 +11,8 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
   python:
-    - proxmoxer
-    - requests
+    - -r requirements.txt
+    - -c constraints.txt
 
   galaxy:
     collections:

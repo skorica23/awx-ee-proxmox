@@ -1,0 +1,2 @@
+ovirt-engine-sdk-python==0
+ovirt-imageio==0
