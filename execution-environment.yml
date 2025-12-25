@@ -2,7 +2,7 @@ version: 3
 
 images:
   base_image:
-    name: quay.io/ansible/awx-ee:latest
+    name: quay.io/ansible/ansible-runner:stable-2.15-latest
 
 dependencies:
   ansible_core:
@@ -14,8 +14,3 @@ dependencies:
   galaxy:
     collections:
       - name: community.proxmox
-#       version: ">=1.3.0"
-
-# additional_build_steps:
-#   prepend_final:
-#     - RUN python3 -m pip install --upgrade pip
