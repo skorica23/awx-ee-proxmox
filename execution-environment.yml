@@ -10,10 +10,12 @@ dependencies:
 
   ansible_runner:
     package_pip: ansible-runner
+
   python:
     - requirements.txt
     - constraints.txt
 
   galaxy:
     collections:
-      - community.proxmox
+      - name: community.proxmox
+        version: ">=1.3.0"
