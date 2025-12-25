@@ -46,10 +46,14 @@ jobs:
       - name: List Podman images
         run: |
           podman images
-
+      
+      - name: Podman log in to docker
+        run:
+          podman login docker.io
+      
       - name: re-tag podman image to docker image
         run:
-          podman tag localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
+          podman save localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
 
       - name: Save  Podman image to tar
         run:
