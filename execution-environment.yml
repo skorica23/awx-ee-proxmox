@@ -11,9 +11,8 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
 
-#  python:
-#     - requirements.txt
-#     - constraints.txt
+  python:
+     - constraints.txt
 
   galaxy:
     collections:
