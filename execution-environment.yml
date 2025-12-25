@@ -11,15 +11,15 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
 
-  python:
-    - requirements.txt
-    - constraints.txt
+#  python:
+#     - requirements.txt
+#     - constraints.txt
 
   galaxy:
     collections:
       - name: community.proxmox
-        version: ">=1.3.0"
+#       version: ">=1.3.0"
 
-additional_build_steps:
-  prepend_final:
-    - RUN python3 -m pip install --upgrade pip
+# additional_build_steps:
+#   prepend_final:
+#     - RUN python3 -m pip install --upgrade pip
