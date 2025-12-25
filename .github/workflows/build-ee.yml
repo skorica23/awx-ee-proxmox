@@ -33,6 +33,11 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Check Docker Installation
+        run: |
+          docker --version
+          sudo service docker start
+
       - name: Build Execution Environment
         run: |
           ansible-builder build \
