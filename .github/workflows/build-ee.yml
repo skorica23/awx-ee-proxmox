@@ -51,9 +51,13 @@ jobs:
         run:
           podman login docker.io
       
+      - name: Podma push to docker registry
+        run:
+          podman push ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
+
       - name: re-tag podman image to docker image
         run:
-          podman save localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
+          podman tag localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
 
       - name: Save  Podman image to tar
         run:
