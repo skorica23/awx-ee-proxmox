@@ -36,7 +36,8 @@ jobs:
       - name: Build Execution Environment
         run: |
           ansible-builder build \
-            --tag ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
+            --tag ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest \
+            --backend docker
       
       - name: List Docker Images
         run: |
