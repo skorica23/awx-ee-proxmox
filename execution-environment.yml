@@ -21,5 +21,5 @@ dependencies:
         version: ">=1.3.0"
 
 additional_build_steps:
-  prependi_final:
+  prepend_final:
     - RUN python3 -m pip install --upgrade pip
