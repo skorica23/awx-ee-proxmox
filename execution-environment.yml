@@ -11,9 +11,6 @@ dependencies:
   ansible_runner:
     package_pip: ansible-runner
 
-  python:
-     - constraints.txt
-
   galaxy:
     collections:
       - name: community.proxmox
