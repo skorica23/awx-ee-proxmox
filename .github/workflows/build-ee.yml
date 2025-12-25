@@ -34,8 +34,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Execution Environment
+        env:
+          ANSIBLE_BUILDER_BACKEND: docker
         run: |
-          USE_DOCKER=true ansible-builder build \
+          ansible-builder build \
             --tag ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest     
       - name: List Docker Images
         run: |
