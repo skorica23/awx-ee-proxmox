@@ -36,8 +36,8 @@ jobs:
       - name: Build Execution Environment
         run: |
           ansible-builder build \
-            --tag ${{ secrets.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
+            --tag ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
 
       - name: Push image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
