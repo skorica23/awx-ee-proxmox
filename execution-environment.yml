@@ -19,3 +19,11 @@ dependencies:
 additional_build_steps:
   prepend_builder:
     - RUN python3 -m pip install --upgrade pip setuptools wheel
+  
+task:   
+  - name: Show pip and ansible versions
+    ansible.builtin.shell: |
+      pip --version
+      ansible --version
+      ansible-galaxy collection list | grep proxmox
+    changed_when: false
