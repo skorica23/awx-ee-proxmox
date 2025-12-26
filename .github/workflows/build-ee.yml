@@ -55,21 +55,21 @@ jobs:
         run:
           podman push ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest
 
-      - name: re-tag podman image to docker image
-        run:
-          podman tag localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
+      # - name: re-tag podman image to docker image
+      #   run:
+      #     podman tag localhost/pspi/awx-ee-proxmox docker.io/yourusername/awx-ee-proxmox
 
-      - name: Save  Podman image to tar
-        run:
-          podman save -o awx-ee-proxmox.tar localhost/pspi/awx-ee-proxmox
+      # - name: Save  Podman image to tar
+      #   run:
+      #     podman save -o awx-ee-proxmox.tar localhost/pspi/awx-ee-proxmox
 
-      - name: Load image to Docker
-        run:
-          docker load -i awx-ee-proxmox.tar
+      # - name: Load image to Docker
+      #   run:
+      #     docker load -i awx-ee-proxmox.tar
       
-      - name: List Docker Images
-        run: |
-         docker images
+      # - name: List Docker Images
+      #   run: |
+      #    docker images
 #      - name: Push image to Docker Hub
 #        run: |
  #         docker push ${{ vars.DOCKERHUB_USERNAME }}/awx-ee-proxmox:latest

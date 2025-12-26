@@ -5,8 +5,8 @@ images:
     name: quay.io/ansible/ansible-runner:stable-2.12-latest
 
 dependencies:
-  # ansible_core:
-  #   package_pip: ansible-core==2.15.13
+  ansible_core:
+    package_pip: ansible-core==2.15.13
 
   # ansible_runner:
   #   package_pip: ansible-runner
@@ -14,3 +14,5 @@ dependencies:
   galaxy:
     collections:
       - name: community.proxmox
+        version: ">=1.4.0"
+
